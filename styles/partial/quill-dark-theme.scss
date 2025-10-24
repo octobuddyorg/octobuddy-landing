@@ -1,0 +1,110 @@
+// ReactQuill Dark Theme Styles
+.dark {
+  .ql-editor {
+    background-color: #171717 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+  }
+
+  .ql-toolbar {
+    background-color: #2e2e30 !important;
+    border-color: #444444 !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .ql-container {
+    border-color: #444444 !important;
+    background-color: #171717 !important;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .ql-toolbar button {
+    color: #ffffff !important;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #3c4ff9 !important;
+    }
+  }
+
+  .ql-toolbar .ql-active {
+    color: #3c4ff9 !important;
+  }
+
+  .ql-toolbar .ql-stroke {
+    stroke: #ffffff !important;
+  }
+
+  .ql-toolbar .ql-fill {
+    fill: #ffffff !important;
+  }
+
+  .ql-toolbar .ql-picker {
+    color: #ffffff !important;
+  }
+
+  .ql-toolbar .ql-picker-options {
+    background-color: #2e2e30 !important;
+    border-color: #444444 !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .ql-toolbar .ql-picker-item {
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #444444 !important;
+    }
+  }
+
+  .ql-toolbar .ql-picker-label {
+    color: #ffffff !important;
+
+    &:hover {
+      color: #3c4ff9 !important;
+    }
+  }
+
+  .ql-toolbar .ql-selected {
+    color: #3c4ff9 !important;
+  }
+
+  .ql-toolbar .ql-picker-options .ql-selected {
+    color: #3c4ff9 !important;
+    background-color: #444444 !important;
+  }
+}
+
+// Light theme enhancements
+.ql-editor {
+  border-radius: 0 0 8px 8px;
+  transition: all 0.2s ease;
+}
+
+.ql-toolbar {
+  border-radius: 8px 8px 0 0;
+  transition: all 0.2s ease;
+}
+
+.ql-container {
+  border-radius: 0 0 8px 8px;
+  transition: all 0.2s ease;
+}
+
+.ql-editor.ql-blank::before {
+  content: attr(data-placeholder);
+  color: #999999;
+  font-style: italic;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Dark theme placeholder override */
+.dark {
+  .ql-editor.ql-blank::before {
+    color: #777777;
+  }
+}

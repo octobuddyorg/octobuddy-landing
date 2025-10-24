@@ -1,0 +1,227 @@
+// Import quill dark theme
+@import "quill-dark-theme";
+
+// Define your theme variables
+$primary-color-dark: #f03a3a;
+$secondary-color-dark: #252526;
+
+$green-color-dark: #17c964;
+
+.danger-border-gradient-dark::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: -0.06rem;
+  background: linear-gradient(
+    140deg,
+    $primary-color-dark -11.71%,
+    $secondary-color-dark 15.44%
+  );
+}
+
+.green-border-gradient-dark::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: -0.06rem;
+  background: linear-gradient(
+    140deg,
+    $green-color-dark -11.71%,
+    $secondary-color-dark 15.44%
+  );
+  border-radius: 0.5rem;
+}
+
+.border-gradient-light::before {
+  content: "";
+  position: absolute;
+  inset: -0.06rem;
+  background: #e7e7e9;
+  z-index: -1;
+  border-radius: 0.5rem;
+}
+
+.danger-border-gradient {
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: #e7e7e9;
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
+  @extend .border-gradient-light;
+}
+
+.dark {
+  .danger-border-gradient {
+    position: relative;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(180deg, #161618 0%, #161618 100%);
+      z-index: -1;
+      border-radius: 0.5rem;
+    }
+    @extend .danger-border-gradient-dark;
+  }
+}
+
+.green-border-gradient {
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: #e7e7e9;
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
+  @extend .border-gradient-light;
+}
+
+.dark {
+  .green-border-gradient {
+    position: relative;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(180deg, #161618 0%, #161618 100%);
+      z-index: -1;
+      border-radius: 0.5rem;
+    }
+    @extend .green-border-gradient-dark;
+  }
+}
+
+@keyframes blinkEffect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink-effect {
+  animation: blinkEffect 1.2s infinite;
+}
+
+/* chat content block */
+.chat-content-box {
+  white-space: normal;
+  word-break: break-word;
+  hr {
+    margin: 1rem 0;
+  }
+  p {
+    margin: 0 0 1rem;
+    padding: 0;
+    word-break: break-word;
+    color: #444444;
+    line-height: 1.25;
+    a {
+      text-decoration: underline;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #3c4ff98a;
+      }
+    }
+    b,
+    strong {
+      color: #171717;
+    }
+  }
+  ul {
+    list-style: disc;
+    padding-left: 3rem;
+    a {
+      text-decoration: underline;
+    }
+    li {
+      padding-left: 0rem;
+      list-style: disc;
+      margin-bottom: 0.75rem;
+      word-break: break-word;
+    }
+  }
+  ul li a {
+    text-decoration: underline;
+    // color: blue; /* or your desired color */
+  }
+  .container {
+    max-width: none;
+  }
+  code {
+    word-break: break-word;
+    white-space: wrap;
+  }
+}
+.dark {
+  .chat-content-box {
+    p {
+      margin: 0 0 1rem;
+      padding: 0;
+      word-break: break-word;
+      color: #ededed;
+
+      b,
+      strong {
+        color: #ededed;
+      }
+    }
+    ul {
+      li {
+        color: #ededed;
+        b,
+        strong {
+          color: #ededed;
+        }
+      }
+    }
+  }
+}
+/* data attribute css */
+.data-attribute-content {
+  word-break: break-word;
+  p {
+    margin: 0 0 1rem;
+    padding: 0;
+    word-break: break-word;
+    font-size: 0.875rem;
+    a {
+      text-decoration: underline;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #3c4ff98a;
+      }
+    }
+  }
+  ul {
+    list-style: disc;
+    padding-left: 1rem;
+    li {
+      font-size: 0.875rem;
+      padding-left: 0rem;
+      list-style: disc;
+      margin-bottom: 0.75rem;
+      word-break: break-word;
+    }
+  }
+  code {
+    word-break: break-word;
+    white-space: wrap;
+  }
+}
